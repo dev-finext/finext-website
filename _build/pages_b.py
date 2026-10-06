@@ -255,8 +255,7 @@ def contact():
     office = f'''<section class="section section--dark" id="office" data-wf="02 · Office / location · address + map placeholder + photo carousel">
   <div class="container"><div class="location">
     <div><span class="eyebrow">המשרד שלנו</span><h2>Finext הוד השרון</h2>
-      <dl><dt>כתובת</dt><dd>הבבלי 48, הוד השרון</dd>
-        <dt>טלפון</dt><dd><a href="tel:+97299556006"><bdi dir="ltr">09-9556006</bdi></a></dd>
+      <dl><dt>טלפון</dt><dd><a href="tel:+97299556006"><bdi dir="ltr">09-9556006</bdi></a></dd>
         <dt>אימייל</dt><dd><a href="mailto:hi@finext.co.il">hi@finext.co.il</a></dd>
         <dt>WhatsApp</dt><dd><a href="https://wa.me/97299556006">שלחו הודעה</a></dd>
         <dt>שעות פעילות</dt><dd>א׳–ה׳ · 09:00–17:30 {EX}</dd></dl></div>
