@@ -24,7 +24,6 @@ PAGES = [
     ("insights.html", "תובנות", B.insights, "insights.html", "כל התוכן בעמוד זה לדוגמה (אין בלוג כרגע)"),
     ("article.html", "מאמר", B.article, "insights.html", "המאמר לדוגמה; הפסקאות על תמחור מבוססות על ה-FAQ באתר הישן"),
     ("about.html", "אודות", B.about, "about.html", None),
-    ("careers.html", "קריירה", B.careers, "careers.html", "כל תוכן הקריירה לדוגמה"),
     ("contact.html", "צור קשר", B.contact, "contact.html", None),
     ("not-included.html", "עמוד לא כלול", B.not_included, None, None),
     ("wireframe-map.html", "מפת wireframe", wf_map, None, None),

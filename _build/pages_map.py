@@ -12,13 +12,11 @@ ROWS = [
     ("insights.html", "תובנות (רשימה)", "waracle.com/insights/", "Hero · קרוסלת תובנות אחרונות · שורות לפי קטגוריה · צ׳יפים של קטגוריות"),
     ("article.html", "מאמר", "waracle.com/insights/…/ (פוסט)", "עמודה ראשית + Aside דביק (שיתוף, כותבים, קשור) · כרטיס ״הבא״"),
     ("about.html", "אודות", "waracle.com/about-us/ + about-us/people/", "Hero + 3 תמונות · סיפור · ערכים · לוגואים · מספרים · צוות"),
-    ("careers.html", "קריירה", "waracle.com/careers/", "Hero + CTA · החיים אצלנו · פיד חברתי · ערכים (אקורדיון) · המלצות עובדים · שאלות נפוצות · מאגר מועמדים"),
     ("contact.html", "צור קשר + משרד", "waracle.com/contact/ + contact/london/", "טופס עם נושא · מצב ״נשלח״ · בלוק משרד עם מפה"),
 ]
 
 NOT = [
     ("תתי-שירות / תתי-תחום (דפי נחיתה עם טופס)", "waracle.com/what-we-do/…/product-discovery/ · industries/…/retail-banking/"),
-    ("משרות פתוחות + דף משרה", "waracle.com/careers/open-roles/…"),
     ("דפי משנה של אודות: ערכים, אנשים", "waracle.com/about-us/our-values/ · about-us/people/ (הערכים והצוות נכנסו בתוך דף האודות)"),
     ("עמוד קטגוריית תובנות", "waracle.com/insights/artificial-intelligence/"),
     ("אירועים", "waracle.com/events/"),

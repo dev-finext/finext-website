@@ -12,7 +12,6 @@ NAV = [
     ("תחומי פעילות", "industries.html"),
     ("פרויקטים", "projects.html"),
     ("תובנות", "insights.html"),
-    ("קריירה", "careers.html"),
     ("הכירו את הצוות", "about.html#team"),
     ("בואו נדבר", "contact.html"),
 ]
@@ -136,7 +135,6 @@ def overlay():
     <ul class="nav-overlay__list">{big}</ul>
     <div class="nav-overlay__groups">
       <div><strong>אודות</strong><ul><li><a href="about.html">הסיפור והערכים</a></li><li><a href="about.html#team">הכירו את הצוות</a></li></ul></div>
-      <div><strong>קריירה</strong><ul><li><a href="careers.html">החיים ב‑Finext</a></li><li><a href="not-included.html">משרות פתוחות</a></li></ul></div>
       <div><strong>תובנות</strong><ul><li><a href="insights.html">בלוג</a></li><li><a href="not-included.html">חדשות</a></li></ul></div>
       <div><strong>המשרד</strong><ul><li><a href="contact.html#office">הוד השרון</a></li><li><a href="tel:+97299556006"><bdi dir="ltr">09-9556006</bdi></a></li></ul></div>
     </div>
@@ -163,9 +161,7 @@ def footer():
       </div>
       <div><h4>קישורים</h4><ul>
         <li><a href="services.html">שירותים</a></li><li><a href="industries.html">תחומי פעילות</a></li><li><a href="projects.html">פרויקטים</a></li>
-        <li><a href="insights.html">תובנות</a></li><li><a href="careers.html">קריירה</a></li><li><a href="about.html">אודות</a></li></ul></div>
-      <div><h4>קריירה</h4><ul>
-        <li><a href="careers.html">החיים ב‑Finext</a></li><li><a href="not-included.html">משרות פתוחות</a></li><li><a href="about.html#values">הערכים שלנו</a></li></ul></div>
+        <li><a href="insights.html">תובנות</a></li><li><a href="about.html">אודות</a></li></ul></div>
       <div><h4>המשרד</h4><ul>
         <li><a href="tel:+97299556006"><bdi dir="ltr">09-9556006</bdi></a></li>
         <li><a href="mailto:hi@finext.co.il">hi@finext.co.il</a></li><li><a href="https://wa.me/97299556006">WhatsApp</a></li></ul></div>

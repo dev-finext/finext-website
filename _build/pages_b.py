@@ -189,47 +189,6 @@ def about():
     return hero + story + vals_head + vrows + stack + nums + team
 
 
-def careers():
-    hero = f'''<section class="hero hero--md" data-wf="01 · Medium hero · eyebrow + H1 + CTA + 3 images">
-  <div class="container"><div class="hero__top">
-    <div><span class="eyebrow">קריירה</span><h1>בית לקהילה מגוונת של אנשי טכנולוגיה {EX}</h1>
-      <div class="mt-m"><a class="btn" href="not-included.html">חיפוש משרות פתוחות</a></div></div>
-    <div class="hero__imgs">{ph("4x5", "תמונה 4:5")}{ph("4x3", "תמונה 4:3")}{ph("4x3", "תמונה 4:3")}</div>
-  </div></div>
-</section>'''
-    life = section(f'''<div class="split split--wide-text">
-  <div><h2>החיים ב‑Finext {EX}</h2>
-    <p>ב‑Finext אנחנו יוצרים בית מקצועי ומעורר השראה לאנשים המוכשרים בתעשייה. הקוד שלנו Custom made — וכך גם סביבת העבודה. כאן מקבלים אחריות מוקדם, לומדים מהטובים ביותר ועובדים על פרויקטים שמגיעים לאלפי משתמשים.</p></div>
-  {ph("4x3", "תמונה 4:3")}
-</div>''', "02 · Life at Finext · split (text + image)")
-    feed = section('<div class="section-title-row"><h2>מהחיים שלנו ב‑LinkedIn ' + EX + '</h2></div><div class="grid grid--4">'
-                   + "".join(f'<div class="feed-card">{ph("1x1", "פוסט 1:1")}<div class="meta"><span>לייקים: 120</span><span>תגובות: 4</span></div><p>כותרת קצרה של פוסט מהרשת החברתית, עם קישור להמשך.</p>{link_arrow("קראו עוד ב‑LinkedIn", "https://www.linkedin.com/company/finext-%D7%A4%D7%99%D7%99%D7%A0%D7%A7%D7%A1%D7%98/")}</div>' for _ in range(4))
-                   + '</div>', "03 · Social feed ×4 (Waracle: Instagram)", cls="section--surface")
-    vals = [("אבטחה כברירת מחדל", "כל שורת קוד נכתבת מתוך הנחה שמישהו ינסה לשבור אותה — הצפנה, בקרת גישה וניטור מהיום הראשון."),
-            ("אספקה מבוססת AI", "כלי בינה מלאכותית מאיצים אותנו, אבל ההחלטות והאחריות נשארים אנושיים."),
-            ("קוד Custom, לא תבניות מדף", "כל מערכת נבנית סביב הבעיה העסקית האמיתית של הלקוח."),
-            ("ליווי אנושי, גם אחרי ההשקה", "אותם אנשים שבנו את המערכת נשארים עם הלקוח, לאורך כל חיי המוצר.")]
-    acc = '<div class="acc">' + "".join(f'<details><summary>{icon_ph("אייקון")}{t}</summary><div class="acc__body">{d}</div></details>' for t, d in vals) + '</div>'
-    values = section(f'<div class="split"><div><h2>הערכים שלנו</h2><p class="muted mt-s">טכנולוגיה טובה נמדדת בערך העסקי שהיא מייצרת.</p></div>{acc}</div>',
-                     "04 · Values accordion ×4 · icon + title + body")
-    quotes = ["״בית מקצועי עם אנשים מעולים ללמוד מהם, ופרויקטים מגוונים לאורך הדרך.״",
-              "״הרגשתי חלק מהצוות כבר מהיום הראשון, עם תהליך קליטה מסודר.״",
-              "״הזדמנות לעבוד על מוצרים חדשניים ולהכיר טכנולוגיות חדשות.״",
-              "״סביבה שיתופית שבה רעיונות מתקבלים בברכה והצוות עוזר.״"]
-    qs = [f'<div class="quote-card"><blockquote>{q}</blockquote><footer>{ph("1x1", "", "ph--round").replace("ph__label", "ph__label sr-only")}<span>עובד.ת · תפקיד</span></footer></div>' for q in quotes]
-    staff = section(carousel(qs, f"<h2>מה העובדים שלנו אומרים {EX}</h2>", "", three=True), "05 · Staff quotes · carousel ×4", cls="section--surface")
-    faqs = [("איך נראה תהליך הגיוס?", "שיחת היכרות, משימה מקצועית קצרה ופגישה עם הצוות. אנחנו שואפים לחזור אליכם תוך שבוע."),
-            ("עם אילו טכנולוגיות עובדים?", "WordPress, PHP, Laravel, Node.js, Python, React, Vue.js, MySQL ועוד — בהתאם לפרויקט."),
-            ("האם מגייסים גם בתחילת הדרך?", "כן. אנחנו מאמינים בלמידה ובליווי, ופתוחים גם למועמדים בתחילת הקריירה."),
-            ("איפה עובדים?", "המשרד בהוד השרון. אפשרויות עבודה היברידית נקבעות לפי התפקיד.")]
-    facc = '<div class="acc">' + "".join(f'<details><summary>{q}</summary><div class="acc__body" style="padding-inline-start:0">{a}</div></details>' for q, a in faqs) + '</div>'
-    faq = section(f'<div class="split"><div><h2>שאלות נפוצות {EX}</h2></div>{facc}</div>', "06 · FAQ accordion ×4")
-    pool = section(f'''<div class="split"><div><h2>הצטרפו למאגר המועמדים</h2><p class="muted mt-s">אנחנו תמיד רוצים להכיר אנשים מוכשרים. הצטרפו למאגר ונפנה אליכם כשתיפתח הזדמנות מתאימה.</p>
-<div class="mt-m"><a class="btn" href="not-included.html">הצטרפות למאגר</a></div></div>{ph("4x3", "תמונה 4:3")}</div>''',
-                   "07 · Talent pool CTA · text + image", cls="section--surface")
-    return hero + life + feed + values + staff + faq + pool
-
-
 def contact():
     form = f'''<section class="section" style="padding-block-start:170px" data-wf="01 · Contact form · 5 fields + message + success state">
   <div class="container"><div style="max-width:760px;margin-inline:auto">
@@ -265,6 +224,6 @@ def contact():
 def not_included():
     return '''<section class="hero hero--small" data-wf="Placeholder page">
   <div class="container" style="min-height:50vh"><h1>העמוד הזה לא נכלל בשלב ה-wireframe</h1>
-  <h2 class="mt-s">סוג העמוד הזה (למשל משרות פתוחות, מדיניות פרטיות, הצהרת נגישות או דף תת-שירות) לא נבנה בשלב הזה. הקישור נשמר כדי שהניווט יהיה שלם.</h2>
+  <h2 class="mt-s">סוג העמוד הזה (למשל מדיניות פרטיות, הצהרת נגישות או דף תת-שירות) לא נבנה בשלב הזה. הקישור נשמר כדי שהניווט יהיה שלם.</h2>
   <div class="mt-m"><a class="btn" href="index.html">חזרה לדף הבית</a> <a class="btn btn--ghost" href="wireframe-map.html">מפת ה-wireframe</a></div></div>
 </section>'''
