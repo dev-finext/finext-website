@@ -11,7 +11,7 @@ ROWS = [
     ("project.html", "דף פרויקט", "waracle.com/our-work/mylo-aegon/", "Hero · תמונה · רקע / אתגר / פתרון / תוצאה · מספרים · פס תמונה · המלצה · עוד פרויקטים"),
     ("insights.html", "תובנות (רשימה)", "waracle.com/insights/", "Hero · קרוסלת תובנות אחרונות · שורות לפי קטגוריה · צ׳יפים של קטגוריות"),
     ("article.html", "מאמר", "waracle.com/insights/…/ (פוסט)", "עמודה ראשית + Aside דביק (שיתוף, כותבים, קשור) · כרטיס ״הבא״"),
-    ("about.html", "אודות", "waracle.com/about-us/ + about-us/people/", "Hero + 3 תמונות · סיפור · ערכים · לוגואים · מספרים · צוות · משרד"),
+    ("about.html", "אודות", "waracle.com/about-us/ + about-us/people/", "Hero + 3 תמונות · סיפור · ערכים · לוגואים · מספרים · צוות"),
     ("careers.html", "קריירה", "waracle.com/careers/", "Hero + CTA · החיים אצלנו · פיד חברתי · ערכים (אקורדיון) · המלצות עובדים · שאלות נפוצות · מאגר מועמדים"),
     ("contact.html", "צור קשר + משרד", "waracle.com/contact/ + contact/london/", "טופס עם נושא · מצב ״נשלח״ · בלוק משרד עם מפה"),
 ]

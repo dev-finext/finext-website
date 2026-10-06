@@ -186,10 +186,7 @@ def about():
     team = section('<div class="section-title-row"><h2>הכירו את הצוות ' + EX + '</h2></div><div class="grid grid--4">'
                    + "".join(f'<div class="person">{ph("1x1", "תמונה 1:1")}<strong>שם מלא</strong><span>תפקיד</span></div>' for _ in range(8))
                    + '</div>', "07 · Team grid ×8 · photo + name + role", cls="section--surface", sid="team")
-    office = section(f'''<div class="section-title-row"><h2>המשרד שלנו</h2></div>
-<div class="studio-card">{ph_bg("תמונת המשרד · 16:9")}<h2>הוד השרון</h2><p>הבבלי 48, הוד השרון</p><div class="mt-s">{link_arrow("פרטים נוספים", "contact.html#office", "")}</div></div>''',
-                     "08 · Studios · location card(s) (Waracle: 5 offices → Finext: 1)")
-    return hero + story + vals_head + vrows + stack + nums + team + office
+    return hero + story + vals_head + vrows + stack + nums + team
 
 
 def careers():
