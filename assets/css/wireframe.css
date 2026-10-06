@@ -418,3 +418,9 @@ body.wf-notes [data-wf]::after {
 .map-table th { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; color: var(--color-text-muted); font-weight: 600; }
 code { font-family: var(--font-mono); font-size: .85em; background: var(--color-surface); padding: 2px 6px; border-radius: 3px; }
 .quote-card footer .ph { width: 44px; flex: none; }
+
+/* ---------- Technologies (grouped) ---------- */
+.tech-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px var(--gap-lg); }
+.tech-group h3 { font-size: 1rem; font-weight: var(--fw-heading); color: var(--color-text-muted); margin-block-end: 14px; }
+.tech-group__logos { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 767px) { .tech-groups { grid-template-columns: 1fr; } }

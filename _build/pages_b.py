@@ -174,9 +174,9 @@ def about():
             ("ליווי אנושי, גם אחרי ההשקה", "אותם אנשים שבנו את המערכת נשארים אתכם — אותו מספר טלפון, תמיכה 24/7, לאורך כל חיי המוצר.")]
     rows = "".join(f'<div class="feature-row">{ph("4x3", "תמונה 4:3")}<div><h2>{t}</h2><p class="muted">{d}</p></div></div>' for t, d in vals)
     vrows = section(f'<div class="feature-rows">{rows}</div>', "04 · Values rows ×4 · image + H3 + text (flips each row)", cls="section--flush-top")
-    stack = section('<div class="section-title-row"><h2>טכנולוגיות שאנחנו עובדים איתן</h2></div><div class="logo-grid">'
-                    + "".join(f'<div>{logo_ph(t)}</div>' for t in TECH) + '</div>',
-                    "05 · Recognition / partners grid · logos ×12 (Waracle: awards badges)", cls="section--surface")
+    groups = "".join(f'<div class="tech-group"><h3>{t}</h3><div class="tech-group__logos">' + "".join(logo_ph(n) for n in names) + '</div></div>' for t, names in TECH_GROUPS)
+    stack = section('<div class="section-title-row"><h2>טכנולוגיות שאנחנו עובדים איתן</h2></div><div class="tech-groups">' + groups + '</div>',
+                    "05 · Technologies · grouped logo grid ×10 categories (Waracle: awards badges)", cls="section--surface")
     nums = section(f'''<div class="section-title-row"><h2>אנשים. ניסיון. זמינות.</h2></div>
 <p class="muted measure">צוות ותיק של אנשי קוד שמלווה ארגונים, עסקים ומעצבים — מהאפיון הראשון ועד הרבה אחרי ההשקה.</p>
 <div class="stats mt-m"><div><span class="stat__num">5,936</span><span class="stat__label">פרויקטים דיגיטליים</span></div>

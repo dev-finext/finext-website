@@ -19,8 +19,18 @@ NAV = [
 CLIENTS = ["Novidea", "Similari", "Verix", "Amai Proteins", "InNegev", "Twig Health",
            "Gifted", "חוות רום", "Heven Drones", "PicUp", "Wanda Fish", "מפה לשם"]
 
-TECH = ["WordPress", "Laravel", "React", "Node.js", "Python", "Vue.js",
-        "PHP", "WooCommerce", "MySQL", "Redis", "ElasticSearch", "Firebase"]
+TECH_GROUPS = [
+    ("CMS ופלטפורמות אתרים", ["WordPress", "WooCommerce", "Laravel", "Shopify"]),
+    ("תוספים ובילדרים של WordPress", ["ACF", "Elementor", "WPML", "LearnDash"]),
+    ("Frontend", ["HTML/CSS/JS", "Bootstrap", "Tailwind"]),
+    ("Backend, שפות ודאטה", ["PHP", "MySQL", "Python", "Node", "git"]),
+    ("אחסון ותשתיות", ["Cloudways", "Nginx", "Apache", "Imunify"]),
+    ("CDN, DNS ואבטחה", ["Cloudflare"]),
+    ("גיבויים ואחסון קבצים", ["SnapShooter", "Backblaze B2"]),
+    ("דיוור ושיווק", ["Mailchimp (סנכרון קמפיינים)", "Mailgun"]),
+    ("SEO, פרסום ואנליטיקס", ["Semrush", "Google Search Console", "Google Analytics"]),
+    ("עיצוב", ["Figma"]),
+]
 
 SERVICES = [
     ("פיתוח פלטפורמות", "פלטפורמות Custom code בקנה מידה ארגוני — מאתרי תדמית ועד פורטלים ומערכות Web מורכבות."),
