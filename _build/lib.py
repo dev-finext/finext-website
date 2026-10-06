@@ -123,7 +123,10 @@ def header(active=None):
   <div class="container site-header__bar">
     <a class="logo" href="index.html" aria-label="Finext — לדף הבית">FINEXT <small>לוגו</small></a>
     <nav class="main-nav" aria-label="ניווט ראשי"><ul>{items}</ul></nav>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay" aria-label="פתיחת תפריט"><span></span><span></span></button>
+    <div class="site-header__actions">
+      <button class="lang-switch" type="button" aria-label="Switch language to English" lang="en">EN</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-overlay" aria-label="פתיחת תפריט"><span></span><span></span></button>
+    </div>
   </div>
 </header>'''
 

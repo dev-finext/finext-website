@@ -110,6 +110,10 @@ body.nav-open .site-header { position: fixed; }
 .main-nav a:hover, .main-nav a[aria-current="page"] { border-color: currentColor; }
 @media (min-width: 1200px) { .main-nav { display: block; } }
 body.nav-open .main-nav { visibility: hidden; }
+.site-header__actions { display: flex; align-items: center; gap: 12px; flex: none; }
+.lang-switch { height: 40px; min-width: 52px; padding: 0 14px; border: 1px solid var(--color-text); border-radius: var(--radius-pill); background: transparent; color: var(--color-text); font-size: .875rem; letter-spacing: .06em; }
+.lang-switch:hover { background: var(--color-text); color: var(--color-page); }
+body.nav-open .lang-switch { background: var(--color-page); }
 .nav-toggle { width: 54px; height: 54px; border-radius: 50%; border: 0; background: var(--color-button); color: var(--color-button-text); display: grid; place-items: center; position: relative; flex: none; }
 .nav-toggle span { position: absolute; width: 20px; height: 2px; background: currentColor; transition: transform .25s, inset .25s; }
 .nav-toggle span:first-child { inset-block-start: 21px; } .nav-toggle span:last-child { inset-block-start: 31px; }
