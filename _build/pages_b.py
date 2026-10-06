@@ -234,15 +234,11 @@ def careers():
 
 
 def contact():
-    form = f'''<section class="section" style="padding-block-start:170px" data-wf="01 · Contact form · subject radios + 5 fields + message + success state">
+    form = f'''<section class="section" style="padding-block-start:170px" data-wf="01 · Contact form · 5 fields + message + success state">
   <div class="container"><div style="max-width:760px;margin-inline:auto">
     <h1 style="font-size:var(--fs-h2)">ספרו לנו איך נוכל לעזור</h1>
     <div class="mt-m">
       <form class="form" data-wf-form action="#">
-        <fieldset class="field radio-row"><legend>נושא הפנייה*</legend>
-          <label><input type="radio" name="subject" checked> <span>בקשת הצעת מחיר</span></label>
-          <label><input type="radio" name="subject"> <span>עיתונות / מדיה</span></label>
-          <label><input type="radio" name="subject"> <span>הכירו לנו את הפרויקט שלכם</span></label></fieldset>
         <div class="form__row"><div class="field"><label for="c-first">שם פרטי*</label><input id="c-first" type="text" required></div>
           <div class="field"><label for="c-last">שם משפחה*</label><input id="c-last" type="text" required></div></div>
         <div class="form__row"><div class="field"><label for="c-co">חברה</label><input id="c-co" type="text"></div>
