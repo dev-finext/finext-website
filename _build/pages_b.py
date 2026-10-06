@@ -23,10 +23,23 @@ def pcards(names, ratio="4x3"):
     return "".join(case_card(n, PROJECTS[n], ratio=ratio, label=f"תמונת פרויקט {r}") for n in names)
 
 
+def pcard_plain(name, note=None, ratio="4x3"):
+    """כרטיס פרויקט בלי תיאור: שם בלבד (ואופציונלית הערה קצרה)."""
+    n = f'<p class="muted">{note}</p>' if note else ""
+    return (f'<article class="card card--project"><a class="card__link" href="project.html">{ph(ratio, f"תמונת פרויקט {ratio.replace(chr(120), chr(58))}")}</a>'
+            f'<a class="card__link" href="project.html"><h3>{name}</h3></a>{n}</article>')
+
+
+def pcard_old(name, ratio="4x3"):
+    """פרויקט קיים מהאתר הישן: שם + תיאור."""
+    return (f'<article class="card card--project"><a class="card__link" href="project.html">{ph(ratio, f"תמונת פרויקט {ratio.replace(chr(120), chr(58))}")}</a>'
+            f'<a class="card__link" href="project.html"><h3>{name}</h3></a><p class="muted">{PROJECTS[name]}</p></article>')
+
+
 def projects():
     hero = '''<section class="hero hero--small" data-wf="01 · Small hero · H1 + H2">
   <div class="container"><h1>פרויקטים</h1>
-  <h2>אנחנו נבחרים על ידי חברות חדשניות בתחומי המסחר, הביטוח, ההייטק והארגונים.</h2></div>
+  <h2>אפליקציות, אתרי תדמית, AI ו‑eCommerce — פרויקטים שבנינו עבור חברות חדשניות.</h2></div>
 </section>'''
     quotes = [
         ("״כחברת חדשנות, פנינו לפיינקסט, כי העומק, הדיוק והיכולת להכיל אתר בסדר גודל שכזה — היה חייב להתבצע בידיים טובות. מרוצים וממליצים!!״", "אודי כהן · מנכ״ל, Similari"),
@@ -41,14 +54,18 @@ def projects():
         + pcards(["Novidea", "חוות רום", "Similari", "מפה לשם"], "16x9") + '</div>',
         "03 · Featured projects · 2×2 large cards (16:9)")
 
-    def group(title, names, wf):
-        return section('<div class="section-title-row"><h3>' + title + '</h3></div><div class="grid grid--3">' + pcards(names) + '</div>',
+    def group(title, cards, wf):
+        return section('<div class="section-title-row"><h3>' + title + '</h3></div><div class="grid grid--3">' + "".join(cards) + '</div>',
                        wf, cls="section--tight")
     groups = (
-        group("eCommerce ומסחר " + EX, ["Gifted", "חוות רום"], "04 · Project group · H3 + grid ×3")
-        + group("ביטוח ופינטק " + EX, ["Novidea"], "05 · Project group")
-        + group("הייטק וסטארטאפים " + EX, ["Verix", "Similari", "Amai Proteins", "Twig Health", "PicUp", "Wanda Fish", "Heven Drones", "NSO"], "06 · Project group")
-        + group("ארגונים ורשויות " + EX, ["InNegev", "מפה לשם"], "07 · Project group")
+        group("אפליקציות", [pcard_plain("מדנס אפליקציות (אר״מ / הר״ש)"), pcard_plain("מדנס ביטוחיה"),
+                            pcard_plain("dwize", "ממתין לאישור — נחליט לפי מה שיפורסם באתר שלהם"), pcard_old("מפה לשם")],
+              "04 · Project group · H3 + grid ×3 · name (+ short line)")
+        + group("אתרי תדמית", [pcard_plain(n) for n in ["Elsight", "Prodalim", "Aerotour", "Summit", "We Ankor", "משינה"]]
+                + [pcard_old(n) for n in ["Novidea", "Verix", "Amai Proteins", "InNegev", "Twig Health", "Heven Drones", "Wanda Fish", "PicUp", "NSO"]],
+                "05 · Project group")
+        + group("AI", [pcard_plain("Immopi"), pcard_old("Similari")], "06 · Project group")
+        + group("eCommerce", [pcard_plain("Trifolium"), pcard_old("Gifted"), pcard_old("חוות רום")], "07 · Project group")
     )
     return hero + tm + feat + groups
 

@@ -7,7 +7,7 @@ ROWS = [
     ("service.html", "דף שירות", "waracle.com/what-we-do/strategy-innovation/", "Hero מדיה · פסקת פתיחה · 4 בלוקים ממוספרים · קרוסלת פרויקטים · המלצה · תובנות"),
     ("industries.html", "תחומי פעילות (רשימה)", "waracle.com/industries/", "Hero קטן · 4 שורות מתחלפות · קרוסלת פרויקטים"),
     ("industry.html", "דף תחום", "waracle.com/industries/financial-services/", "Hero מדיה + CTA · סטריפ לוגואים · פתיחה · 5 בלוקים ממוספרים · פרויקטים · טופס ליד · המלצה · תובנות"),
-    ("projects.html", "פרויקטים (רשימה)", "waracle.com/our-work/", "Hero קטן · קרוסלת המלצות · פרויקטים נבחרים (2×2) · קבוצות לפי תחום"),
+    ("projects.html", "פרויקטים (רשימה)", "waracle.com/our-work/", "Hero קטן · קרוסלת המלצות · פרויקטים נבחרים (2×2) · קבוצות: אפליקציות, אתרי תדמית, AI, eCommerce"),
     ("project.html", "דף פרויקט", "waracle.com/our-work/mylo-aegon/", "Hero · תמונה · רקע / אתגר / פתרון / תוצאה · מספרים · פס תמונה · המלצה · עוד פרויקטים"),
     ("insights.html", "תובנות (רשימה)", "waracle.com/insights/", "Hero · קרוסלת תובנות אחרונות · שורות לפי קטגוריה · צ׳יפים של קטגוריות"),
     ("article.html", "מאמר", "waracle.com/insights/…/ (פוסט)", "עמודה ראשית + Aside דביק (שיתוף, כותבים, קשור) · כרטיס ״הבא״"),

@@ -16,8 +16,9 @@ NAV = [
     ("בואו נדבר", "contact.html"),
 ]
 
-CLIENTS = ["Novidea", "Similari", "Verix", "Amai Proteins", "InNegev", "Twig Health",
-           "Gifted", "חוות רום", "Heven Drones", "PicUp", "Wanda Fish", "מפה לשם"]
+CLIENTS = ["Novidea", "Similari", "Verix", "Gifted", "חוות רום", "מפה לשם",
+           "מדנס", "Elsight", "Prodalim", "Aerotour", "Summit", "We Ankor",
+           "משינה", "Immopi", "Trifolium", "InNegev", "Amai Proteins", "Twig Health"]
 
 TECH_GROUPS = [
     ("CMS ופלטפורמות אתרים", ["WordPress", "WooCommerce", "Laravel", "Shopify"]),

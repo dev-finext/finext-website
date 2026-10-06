@@ -26,7 +26,7 @@ def home():
         '<h2 style="max-width:18em">צוותי הפיתוח, הדאטה והמוצר שלנו עובדים בשיתוף פעולה עם חלק מהארגונים הנועזים והחדשניים בישראל.</h2>'
         f'<div class="logo-grid mt-l">{logos}</div>'
         '<div class="link-row">' + link_arrow("סיפורי ההצלחה שלנו", "projects.html") + '</div>',
-        "03 · Client logos · dark band · H2 + logo grid ×12 + link", cls="section--dark")
+        "03 · Client logos · dark band · H2 + logo grid ×18 + link", cls="section--dark")
 
     # (בלוק Waracle100 הוצא בכוונה — לא רלוונטי ל-Finext)
 
