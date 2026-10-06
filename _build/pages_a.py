@@ -20,6 +20,18 @@ def home():
         + '<div class="center link-row">' + link_arrow("כל השירותים שלנו", "services.html") + '</div>',
         "02 · What we do · eyebrow + H2 (centered) + 4 cards (7:9) + link")
 
+    # 2b. ONGOING CARE
+    care = section(
+        f'''<div class="split split--wide-text">
+  <div><span class="eyebrow">ליווי ותחזוקה</span>
+    <h2>אנחנו לא נעלמים אחרי ההשקה. ליווי ותחזוקה שוטפים, בשותפות איתכם לאורך זמן.</h2>
+    <p class="muted measure">שירות ותחזוקה הם לא תוספת אצלנו, אלא חלק מרכזי מהעבודה. את המוצר שבנינו ממשיכים לשמור, לשדרג ולפתח יחד.</p>
+    <div class="mt-m">{link_arrow("תחזוקה ושירות", "service.html")}</div></div>
+  {ph("4x3", "תמונה / איור ליווי ותחזוקה 4:3")}
+</div>
+<div class="mt-l">{care_points()}</div>''',
+        "02b · Ongoing care & service · 2-col split + 3 points (Trello #5)", cls="section--surface")
+
     # 3. CLIENT LOGOS (dark band)
     logos = "".join(f'<div>{logo_ph(c)}</div>' for c in CLIENTS)
     clients = section(
@@ -80,7 +92,7 @@ def home():
   <div class="container">{carousel(arts, f"<h2>תובנות מאנשי הקוד {EX}</h2>", link_arrow("כל התובנות", "insights.html"))}</div>
 </section>'''
 
-    return hero + wwd + clients + ind + slider + promo + culture + insights
+    return hero + wwd + care + clients + ind + slider + promo + culture + insights
 
 
 def services():
@@ -93,11 +105,13 @@ def services():
   {ph("4x3", "תמונת שירות 4:3")}
 </div>''' for t, d in SERVICES)
     body = section(f'<div class="alt-rows">{rows}</div>', "02 · Alternating rows ×4 · text + image (flips each row)", cls="section--flush-top")
+    care = section('<div class="section-title-row"><h2>בכל שירות: ליווי ותחזוקה שוטפים</h2></div><p class="muted measure">הליווי בשותפות לאורך זמן הוא חלק בלתי נפרד מכל שירות.</p><div class="mt-m">' + care_points() + '</div>',
+                   "02b · Ongoing care callout · H2 + 3 points (Trello #5)")
     ind = section(
         '<div class="section-title-row"><h2>תחומי פעילות</h2></div>'
         '<div class="grid grid--4">' + "".join(card(t, "industry.html", label="תמונת תחום 7:9") for t, _ in INDUSTRIES) + '</div>',
         "03 · Industries · H2 + 4 cards", cls="section--surface")
-    return hero + body + ind
+    return hero + body + care + ind
 
 
 def service():
@@ -127,6 +141,8 @@ def service():
   <div><p>{p1}</p><p class="muted">{p2}</p>{link_arrow("בואו נדבר", "contact.html")}</div>
 </div>''' for i, (t, p1, p2) in enumerate(blocks_data, 1))
     blocks = section(f'<div class="num-blocks">{nb}</div>', "03 · Numbered capability blocks ×4 · icon + no. + H2 + text + link", cls="section--flush-top")
+    care = section('<div class="section-title-row"><h2>ואחרי ההשקה — ליווי ותחזוקה שוטפים</h2></div><div class="mt-m">' + care_points() + '</div>',
+                   "03b · Ongoing care callout · H2 + 3 points (Trello #5)")
     who = section(
         carousel([case_card("Novidea", "אתר יציב ומאובטח לחברה חדשנית בביטוח"),
                   case_card("חוות רום", "חנות אונליין ומערכת הזמנות לחווה אקולוגית"),
@@ -139,7 +155,7 @@ def service():
         "05 · Client testimonial · centered quote + logo")
     ins = section(carousel([article_card(t) for t in ARTICLES[:4]], f"<h2>תובנות מאנשי הקוד {EX}</h2>", link_arrow("כל התובנות", "insights.html")),
                   "06 · Insights · carousel ×4", cls="section--surface")
-    return hero + intro_p + blocks + who + tm + ins
+    return hero + intro_p + blocks + care + who + tm + ins
 
 
 def industries():
