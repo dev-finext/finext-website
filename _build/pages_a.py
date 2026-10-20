@@ -49,32 +49,6 @@ def home():
         + '<div class="center link-row">' + link_arrow("התחומים שבחרנו", "industries.html") + '</div>',
         "04 · Industries · eyebrow + H2 + 4 cards (7:9) + link")
 
-    # 5. CASE SLIDER (full width)
-    slides = [
-        ("Novidea", "אתר יציב ומאובטח לחברה חדשנית בביטוח"),
-        ("חוות רום", "חנות אונליין ומערכת הזמנות לחווה אקולוגית דינמית"),
-        ("Similari", "פלטפורמת תובנות מבוססת AI לעולם הפטנטים"),
-    ]
-    sl = "".join(f'''<div class="case-slide">
-      {ph_bg("תמונת רקע של הפרויקט · 1920×1000")}
-      <div class="container"><div class="case-slide__content">
-        <span class="eyebrow">{c}</span><h2>{t}</h2>{link_arrow("לסיפור המלא", "project.html", "")}
-      </div></div></div>''' for c, t in slides)
-    slider = f'''<section class="case-slider" data-slider data-wf="05 · Case-study slider · full-width, 3 slides + dots">
-  <div class="case-slider__track">{sl}</div>
-  <div class="case-slider__dots" role="group" aria-label="שקופיות פרויקטים"></div>
-</section>'''
-
-    # 6. PROMO / WHITEPAPER
-    promo = section(
-        f'''<div class="promo">
-  <div class="promo__media">{ph("3x4", "מוקאפ מכשיר + כריכת המדריך 3:4")}</div>
-  <div>{logo_ph("לוגו / מותג המדריך")}
-    <h2>קראו את המחקר שלנו על האופן שבו AI משנה את מחזור חיי פיתוח התוכנה. {EX}</h2>
-    <a class="btn btn--light" href="not-included.html">להורדת המדריך החינמי</a></div>
-</div>''',
-        "06 · Promo / lead-magnet · dark band · device mock + H2 + download CTA", cls="section--dark2")
-
     # 7. CULTURE
     culture = section(
         f'''<div class="split">
@@ -83,16 +57,27 @@ def home():
     {link_arrow("הכירו את הצוות", "about.html#team")}</div>
   {ph("4x5", "תמונת צוות / תרבות 4:5")}
 </div>''',
-        "07 · Culture · 2-col split (text + image)")
+        "06 · Culture · 2-col split (text + image)")
 
-    # 8. INSIGHTS
-    arts = [article_card(t) for t in ARTICLES[:4]]
+    # 8. BLOG (featured AI research + 2 articles)
+    def blog_row(title, label="תמונה 16:10"):
+        return (f'<article class="blog-row"><a class="card__link" href="article.html">{ph("16x10", label)}</a>'
+                f'<div><h5>מאמר</h5><a class="card__link" href="article.html"><h3>{title}</h3></a></div></article>')
     insights = f'''<div class="container"><hr class="rule"></div>
-<section class="section" data-wf="08 · Insights · H2 + link + carousel ×4 article cards">
-  <div class="container">{carousel(arts, f"<h2>תובנות מאנשי הקוד {EX}</h2>", link_arrow("כל התובנות", "insights.html"))}</div>
+<section class="section" data-wf="07 · Blog · H2 + link + featured research (large) + 2 article rows">
+  <div class="container">
+    <div class="section-title-row"><h2>תובנות מאנשי הקוד {EX}</h2>{link_arrow("כל התובנות", "insights.html")}</div>
+    <div class="blog-grid">
+      <article class="blog-feature">{ph("4x5", "תמונת המחקר / כריכת המדריך 4:5")}
+        <div><h5>מחקר · מדריך להורדה</h5>
+          <h3>קראו את המחקר שלנו על האופן שבו AI משנה את מחזור חיי פיתוח התוכנה.</h3>
+          <div class="mt-s"><a class="btn" href="not-included.html">להורדת המדריך החינמי</a></div></div></article>
+      <div class="blog-stack">{blog_row(ARTICLES[0])}{blog_row(ARTICLES[1])}</div>
+    </div>
+  </div>
 </section>'''
 
-    return hero + wwd + care + clients + ind + slider + promo + culture + insights
+    return hero + wwd + care + clients + ind + culture + insights
 
 
 def services():

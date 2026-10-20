@@ -424,3 +424,13 @@ code { font-family: var(--font-mono); font-size: .85em; background: var(--color-
 .tech-group h3 { font-size: 1rem; font-weight: var(--fw-heading); color: var(--color-text-muted); margin-block-end: 14px; }
 .tech-group__logos { display: flex; flex-wrap: wrap; gap: 12px; }
 @media (max-width: 767px) { .tech-groups { grid-template-columns: 1fr; } }
+
+/* ---------- Blog (home): featured + stacked rows ---------- */
+.blog-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--gap-lg); align-items: stretch; }
+.blog-feature { display: flex; flex-direction: column; gap: 20px; }
+.blog-feature h3 { font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem); line-height: 1.25; margin-block-start: 8px; }
+.blog-stack { display: grid; grid-template-rows: 1fr 1fr; gap: var(--gap-lg); }
+.blog-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); align-items: center; }
+.blog-row h3 { margin-block-start: 8px; }
+@media (max-width: 899px) { .blog-grid { grid-template-columns: 1fr; } .blog-row { grid-template-columns: 1fr; } .blog-stack { grid-template-rows: none; } }
+.blog-row a.card__link { text-decoration: none; }

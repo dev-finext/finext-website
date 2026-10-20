@@ -9,7 +9,6 @@ EX = '<span class="ex-tag" title="תוכן לדוגמה שנוצר עבור ה-w
 
 NAV = [
     ("שירותים", "services.html"),
-    ("תחומי פעילות", "industries.html"),
     ("פרויקטים", "projects.html"),
     ("תובנות", "insights.html"),
     ("הכירו את הצוות", "about.html#team"),
